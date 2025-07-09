@@ -1,0 +1,604 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: gh lijiaxing, hb, LIC=ZB4EI-T8DBQ-56DQ2-926Y1-XBRKR-NHEXQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.15.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.15.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+C:\Users\lijiaxing\Desktop\NB\NB-IOT_ship-master\嘉立创代码\ship_code\iot_projectOS\Project\HY-F407.uvprojx
+Project File Date:  04/08/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'YH'
+assembling startup_stm32f40xx.s...
+compiling stm32f4xx_cec.c...
+compiling system_stm32f4xx.c...
+compiling misc.c...
+compiling stm32f4xx_cryp_des.c...
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_crc.c...
+compiling stm32f4xx_cryp_tdes.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_cryp_aes.c...
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_dac.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_dcmi.c...
+compiling stm32f4xx_dfsdm.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_dsi.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_flash_ramfunc.c...
+compiling stm32f4xx_fmpi2c.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_hash.c...
+compiling stm32f4xx_hash_md5.c...
+compiling stm32f4xx_hash_sha1.c...
+compiling stm32f4xx_iwdg.c...
+compiling stm32f4xx_qspi.c...
+compiling stm32f4xx_lptim.c...
+compiling stm32f4xx_i2c.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_rng.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_rtc.c...
+compiling stm32f4xx_sai.c...
+compiling stm32f4xx_sdio.c...
+compiling stm32f4xx_spdifrx.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_wwdg.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_tim.c...
+compiling sys.c...
+compiling main.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\main.c(51): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+    xTaskCreate(Start_Task,"Start_Task",
+TART_STACK_SIZE,
+ULL,
+TART_PRIORITY,&Start_Handle);
+..\User\main.c(48): warning:  #177-D: variable "i" was declared but never referenced
+  	uint32_t i;
+..\User\main.c(134): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  		xTaskCreate(IOT_Usart_Task,"IOT_Usart_Task",
+OT_USART_STACK_SIZE,
+ULL,
+OT_USART_PRIORITY,&IOT_Usart_Task_Handle);
+..\User\main.c(144): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  		xTaskCreate(Iot_Init_Task,"Iot_Init_Task",
+OT_INIT_STACK_SIZE,
+ULL,
+OT_INIT_PRIORITY,&Iot_Init_Task_Handle);
+..\User\main.c(154): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Idel_Task,"Idel_Task",
+OT_RECV_STACK_SIZE,
+ULL,
+OUTE_PRIORITY,&Idel_Task_Handle);
+..\User\main.c(106): warning:  #177-D: variable "i" was declared but never referenced
+    int i=0;
+..\User\main.c(173): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\main.c(26): warning:  #177-D: variable "firStateF32" was declared but never referenced
+  static float firStateF32[BLOCK_SIZE + NUM_TAPS - 1];        /* 状态缓?妫???小numTaps + blockSize - 1*/
+..\User\main.c: 11 warnings, 0 errors
+compiling stm32f4xx_it.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\stm32f4xx_it.c: 3 warnings, 0 errors
+compiling cyc_list.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\cyc_list.c(113): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Bsp\cyc_list.c: 4 warnings, 0 errors
+compiling bsp_SysTick.c...
+compiling ship_route.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\ship_route.c(10): warning:  #47-D: incompatible redefinition of macro "MAX" (declared at line 4 of "..\User\Bsp\primx.h")
+  #define MAX 4
+..\User\Bsp\ship_route.c(93): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(send_gps, json, latstr,lonstr); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(93): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+      sprintf(send_gps, json, latstr,lonstr); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(94): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      json_len = strlen(send_gps)/sizeof(u8);
+..\User\Bsp\ship_route.c(106): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(send_battry, json,battry); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(106): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+      sprintf(send_battry, json,battry); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(107): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      json_len = strlen(send_battry)/sizeof(u8);
+..\User\Bsp\ship_route.c(118): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(send_cpu_temp, json,cpu_temp); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(118): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+      sprintf(send_cpu_temp, json,cpu_temp); //?榻???要发?偷?json ??
+..\User\Bsp\ship_route.c(119): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      json_len = strlen(send_cpu_temp)/sizeof(u8);
+..\User\Bsp\ship_route.c(150): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  				sprintf(gps_atstr,"AT+QMTPUB=0,0,0,0,\"public\",%s\r\n",send_gps);
+..\User\Bsp\ship_route.c(164): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  					sprintf(gps_atstr,"AT+QMTPUB=0,0,0,0,\"public\",%s\r\n",send_battry);		
+..\User\Bsp\ship_route.c(178): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  					sprintf(gps_atstr,"AT+QMTPUB=0,0,0,0,\"public\",%s\r\n",send_cpu_temp);	
+..\User\Bsp\ship_route.c(245): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			 sprintf(gps_atstr,"AT+QMTPUB=0,0,0,0,\"public\",Signal quality %s\r\n",sin_cqr);
+..\User\Bsp\ship_route.c(557): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  											convert_to_compass(&map_angle);
+..\User\Bsp\ship_route.c(571): warning:  #223-D: function "USART_printf" declared implicitly
+  												
+ot_Usart("AT+QMTPUB=0,0,0,0,\"public\",%dm\r\n",(int)(disance*1000));
+..\User\Bsp\ship_route.c(649): warning:  #223-D: function "USART_printf" declared implicitly
+  												
+ot_Usart("AT+QMTPUB=0,0,0,0,\"public\",disance %dm error#\r\n",(int)(disance*1000));
+..\User\Bsp\ship_route.c(697): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  						convert_to_compass(&map_angle);
+..\User\Bsp\ship_route.c(700): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  						convert_to_compass(&map_angle);
+..\User\Bsp\ship_route.c(738): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  									convert_to_compass(&map_angle); 
+..\User\Bsp\ship_route.c(744): warning:  #223-D: function "USART_printf" declared implicitly
+  										
+ot_Usart("AT+QMTPUB=0,0,0,0,\"public\",%dm %lf\r\n",(int)(disance*1000),map_angle);
+..\User\Bsp\ship_route.c(310): warning:  #177-D: variable "i" was declared but never referenced
+  	int i=0;
+..\User\Bsp\ship_route.c(311): warning:  #177-D: variable "H_angle" was declared but never referenced
+  	double H_angle=0;
+..\User\Bsp\ship_route.c(1021): warning:  #177-D: variable "GaX" was declared but never referenced
+  	double GaX,GaY,GaXmax=0,GaXmin=0,GaYmax=0,GaYmin=0;
+..\User\Bsp\ship_route.c(1021): warning:  #177-D: variable "GaY" was declared but never referenced
+  	double GaX,GaY,GaXmax=0,GaXmin=0,GaYmax=0,GaYmin=0;
+..\User\Bsp\ship_route.c(1125): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1125): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1125): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1132): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1132): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1132): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1159): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1159): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1159): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\ship_route.c(1167): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1167): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1167): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\ship_route.c(1182): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  						gcj02_to_wgs84(&wgs_maplon,&wgs_maplat);
+..\User\Bsp\ship_route.c(1182): warning:  #167-D: argument of type "volatile double *" is incompatible with parameter of type "double *"
+  						gcj02_to_wgs84(&wgs_maplon,&wgs_maplat);
+..\User\Bsp\ship_route.c(1199): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      int len = strlen(str);
+..\User\Bsp\ship_route.c(1258): warning:  #550-D: variable "latitude0" was set but never used
+      double longitude1,latitude1, longitude0,latitude0, X0,Y0, xval,yval;
+..\User\Bsp\ship_route.c(1417): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Bsp\ship_route.c: 45 warnings, 0 errors
+compiling bsp_Flash.c...
+..\User\Bsp\bsp_Flash.c(24): warning:  #47-D: incompatible redefinition of macro "SPIT_FLAG_TIMEOUT" (declared at line 7)
+  #define SPIT_FLAG_TIMEOUT 0x1000;
+..\User\Bsp\bsp_Flash.c(327): warning:  #177-D: variable "Cmd" was declared but never referenced
+  	uint8_t Cmd=0,i;
+..\User\Bsp\bsp_Flash.c(422): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Bsp\bsp_Flash.c: 3 warnings, 0 errors
+compiling bsp_Led.c...
+compiling primx.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\primx.c: 3 warnings, 0 errors
+compiling bsp_Compass.c...
+..\User\Bsp\bsp_Compass.c(16): warning:  #223-D: function "IIC_Init" declared implicitly
+    IIC_Init();
+..\User\Bsp\bsp_Compass.c(36): warning:  #940-D: missing return statement at end of non-void function "Compass_Init"
+  }
+..\User\Bsp\bsp_Compass.c(104): warning:  #177-D: variable "z1" was declared but never referenced
+  	  int x1,y1,z1;
+..\User\Bsp\bsp_Compass.c: 3 warnings, 0 errors
+compiling bsp_IOT_BC20.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\bsp_IOT_BC20.c(64): warning:  #223-D: function "USART_printf" declared implicitly
+    
+ot_Usart("%s\r\n",Cmd);
+..\User\Bsp\bsp_IOT_BC20.c(83): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  			strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"ERROR");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(83): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  			strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"ERROR");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(83): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  			strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"ERROR");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(84): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  			if(str_cmp(strx,"ERROR"))
+..\User\Bsp\bsp_IOT_BC20.c(151): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  		xTaskCreate(Iot_Connet_ALIYUN_Task,"Iot_Connet_ALIYUN_Task",
+OT_CONNECT_STACK_SIZE,
+ULL,
+OT_CONNECT_PRIORITY,&Iot_Connect_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(206): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Route_Task,"Route_Task",
+OUTE_STACK_SIZE,
+ULL,
+OUTE_PRIORITY,&Route_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(220): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Sensors_Processing_Task,"Sensors_Processing_Task",
+OT_PROCESS_STACK_SIZE,
+ULL,
+OT_PROCESS_PRIORITY,&Sensors_Processing_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(234): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Iot_Pubsh_Task,"Iot_Pubsh_Task",
+OT_PUBSH_STACK_SIZE,
+ULL,
+OT_PUBSH_PRIORITY,&Iot_Pubsh_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(248): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Iot_Recv_Task,"Iot_Recv_Task",
+OT_RECV_STACK_SIZE,
+ULL,
+OT_RECV_PRIORITY,&Iot_Recv_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(260): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Gps_Task,"Gps_Task",
+OT_PUBSH_STACK_SIZE,
+ULL,
+OT_PUBSH_PRIORITY,&Gps_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(272): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "TaskFunction_t"
+  			xTaskCreate(Gps_Send_Task,"Gps_Send_Task",
+OT_PUBSH_STACK_SIZE,
+ULL,
+OT_PUBSH_PRIORITY,&Gps_Send_Task_Handle);
+..\User\Bsp\bsp_IOT_BC20.c(308): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  		Mqttaliyun_Savedata((u8*)send_json,Sensors_Msg.latstr,Sensors_Msg.lonstr,Sensors_Msg.battery,Sensors_Msg.PH,Sensors_Msg.temp,Sensors_Msg.turbidity,Sensors_Msg.tds,Sensors_Msg.temperature_DHT11,Sensors_Msg.humidity_DHT11,Sensors_Msg.Pressure,Sensors_Msg.H,Sensors_Msg.light);
+..\User\Bsp\bsp_IOT_BC20.c(302): warning:  #177-D: variable "Gps_Data" was declared but never referenced
+  		  u8 Gps_Data[40];
+..\User\Bsp\bsp_IOT_BC20.c(329): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(atstr,"AT+QMTPUB=0,0,0,0,\"public\",%s\r\n",send_json);
+..\User\Bsp\bsp_IOT_BC20.c(413): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  		 strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"$GNRMC");//?榭??欠?为GPS??
+..\User\Bsp\bsp_IOT_BC20.c(413): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  		 strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"$GNRMC");//?榭??欠?为GPS??
+..\User\Bsp\bsp_IOT_BC20.c(417): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  				 find_and_copy(result,strIOT_Fram_Record.RX_ISO_BUF,"$GNRMC");
+..\User\Bsp\bsp_IOT_BC20.c(417): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  				 find_and_copy(result,strIOT_Fram_Record.RX_ISO_BUF,"$GNRMC");
+..\User\Bsp\bsp_IOT_BC20.c(422): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					for (i = 0; i < strlen(strIOT_Fram_Record.RX_ISO_BUF); i++) 
+..\User\Bsp\bsp_IOT_BC20.c(424): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  							if (strncmp(strIOT_Fram_Record.RX_ISO_BUF + i, search, strlen(search)) == 0) 
+..\User\Bsp\bsp_IOT_BC20.c(424): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  							if (strncmp(strIOT_Fram_Record.RX_ISO_BUF + i, search, strlen(search)) == 0) 
+..\User\Bsp\bsp_IOT_BC20.c(424): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  							if (strncmp(strIOT_Fram_Record.RX_ISO_BUF + i, search, strlen(search)) == 0) 
+..\User\Bsp\bsp_IOT_BC20.c(426): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  									strcpy(result, strIOT_Fram_Record.RX_ISO_BUF + i + strlen(search));//bytes + i + strlen(search)=bytes[]=','将??始??址，???娴??????址??频?result
+..\User\Bsp\bsp_IOT_BC20.c(426): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  									strcpy(result, strIOT_Fram_Record.RX_ISO_BUF + i + strlen(search));//bytes + i + strlen(search)=bytes[]=','将??始??址，???娴??????址??频?result
+..\User\Bsp\bsp_IOT_BC20.c(426): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+  									strcpy(result, strIOT_Fram_Record.RX_ISO_BUF + i + strlen(search));//bytes + i + strlen(search)=bytes[]=','将??始??址，???娴??????址??频?result
+..\User\Bsp\bsp_IOT_BC20.c(441): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  						 strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"\"CJ02:");//?榭??欠?为GPS??;
+..\User\Bsp\bsp_IOT_BC20.c(441): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  						 strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"\"CJ02:");//?榭??欠?为GPS??;
+..\User\Bsp\bsp_IOT_BC20.c(402): warning:  #177-D: variable "search_cj02" was declared but never referenced
+  	u8* search_cj02 = "\"CJ02:";
+..\User\Bsp\bsp_IOT_BC20.c(406): warning:  #177-D: variable "len" was declared but never referenced
+  	int len;
+..\User\Bsp\bsp_IOT_BC20.c(471): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		  strcpy(strIOT_Fram_Record.RX_ISO_BUF,strIOT_Fram_Record.RX_DATA_BUF);
+..\User\Bsp\bsp_IOT_BC20.c(471): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+  		  strcpy(strIOT_Fram_Record.RX_ISO_BUF,strIOT_Fram_Record.RX_DATA_BUF);
+..\User\Bsp\bsp_IOT_BC20.c(476): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  		   route_strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"thing.service.run");//?榭??欠?为开船?藕?
+..\User\Bsp\bsp_IOT_BC20.c(476): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  		   route_strx=strstr(strIOT_Fram_Record.RX_ISO_BUF,"thing.service.run");//?榭??欠?为开船?藕?
+..\User\Bsp\bsp_IOT_BC20.c(479): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  						find_and_copy(result,strIOT_Fram_Record.RX_ISO_BUF,"params");
+..\User\Bsp\bsp_IOT_BC20.c(479): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  						find_and_copy(result,strIOT_Fram_Record.RX_ISO_BUF,"params");
+..\User\Bsp\bsp_IOT_BC20.c(564): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+  			 find_and_copy(sin_cqr,strIOT_Fram_Record.RX_ISO_BUF,"+CSQ:");
+..\User\Bsp\bsp_IOT_BC20.c(612): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  		  	strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTOPEN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(612): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  		  	strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTOPEN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(612): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  		  	strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTOPEN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(622): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(atstr,"AT+QMTCONN=0,\"%s\",\"%s\",\"%s\"\r\n",
+MQX_PRODUCEKEY,
+MQX_DEVICENAME,
+MQX_DEVICESECRET);
+..\User\Bsp\bsp_IOT_BC20.c(628): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTCONN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(628): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTCONN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(628): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTCONN:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(639): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTSUB:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(639): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTSUB:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(639): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  				strx=strstr((const u8*)strIOT_Fram_Record.RX_DATA_BUF,(const u8*)"+QMTSUB:");//返??OK
+..\User\Bsp\bsp_IOT_BC20.c(651): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      int len = strlen(str);
+..\User\Bsp\bsp_IOT_BC20.c(697): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      int len1 = strlen(str);    
+..\User\Bsp\bsp_IOT_BC20.c(698): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      int len2 = strlen(substr);    
+..\User\Bsp\bsp_IOT_BC20.c(701): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if (strncmp(&str[i], substr, len2) == 0) {    
+..\User\Bsp\bsp_IOT_BC20.c(701): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if (strncmp(&str[i], substr, len2) == 0) {    
+..\User\Bsp\bsp_IOT_BC20.c(722): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      int len = strlen(str);
+..\User\Bsp\bsp_IOT_BC20.c(749): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(send_json, json,turbidity,TDS,temp,PH,battery,latstr,lonstr,temperature_DHT11,humidity_DHT11,Pressure,H,light); //?榻???要发?偷?json ??
+..\User\Bsp\bsp_IOT_BC20.c(749): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+      sprintf(send_json, json,turbidity,TDS,temp,PH,battery,latstr,lonstr,temperature_DHT11,humidity_DHT11,Pressure,H,light); //?榻???要发?偷?json ??
+..\User\Bsp\bsp_IOT_BC20.c(750): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      json_len = strlen(send_json)/sizeof(u8);
+..\User\Bsp\bsp_IOT_BC20.c(760): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\bsp_IOT_BC20.c(760): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\bsp_IOT_BC20.c(760): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+      strx=strstr((const u8*)Gps_String,(const u8*)"A,");//??取纬?鹊?位??
+..\User\Bsp\bsp_IOT_BC20.c(767): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\bsp_IOT_BC20.c(767): warning:  #167-D: argument of type "const u8 *" is incompatible with parameter of type "const char *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\bsp_IOT_BC20.c(767): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "u8 *"
+  						strx=strstr((const u8*)Gps_String,(const u8*)"N,");//??取经??值
+..\User\Bsp\bsp_IOT_BC20.c(797): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  					sprintf(Gps_Coordin.Longitude,"%.6lf",Gps_Coordin.gpslon);//????转?址?
+..\User\Bsp\bsp_IOT_BC20.c(798): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  					sprintf(Gps_Coordin.Latitude,"%.6lf",Gps_Coordin.gpslat);
+..\User\Bsp\bsp_IOT_BC20.c(800): warning:  #513-D: a value of type "u8 *" cannot be assigned to an entity of type "char *"
+  					Sensors_Msg.latstr=Gps_Coordin.Latitude;
+..\User\Bsp\bsp_IOT_BC20.c(801): warning:  #513-D: a value of type "u8 *" cannot be assigned to an entity of type "char *"
+  					Sensors_Msg.lonstr=Gps_Coordin.Longitude;
+..\User\Bsp\bsp_IOT_BC20.c: 69 warnings, 0 errors
+compiling bsp_debug_usart.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\bsp_debug_usart.c(291): warning:  #177-D: variable "xReturn" was declared but never referenced
+  	BaseType_t xReturn=pdPASS;
+..\User\Bsp\bsp_debug_usart.c(292): warning:  #177-D: variable "xHigherPriorityTaskWoken" was declared but never referenced
+  	BaseType_t xHigherPriorityTaskWoken =  pdFALSE;
+..\User\Bsp\bsp_debug_usart.c: 5 warnings, 0 errors
+compiling bsp_Sensors.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\bsp_Sensors.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if(Sensors_Msg.temp>=0&&Sensors_Msg.temp<=50)
+..\User\Bsp\bsp_Sensors.c(92): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if(Sensors_Msg.tds>=0&&Sensors_Msg.tds<=500)
+..\User\Bsp\bsp_Sensors.c(140): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Bsp\bsp_Sensors.c: 6 warnings, 0 errors
+compiling DEV_IIC.c...
+..\User\Bsp\DEV_IIC.c(85): warning:  #177-D: variable "re" was declared but never referenced
+  	uint8_t re,ucErrTime=0;
+..\User\Bsp\DEV_IIC.c(172): warning:  #177-D: variable "value" was declared but never referenced
+  	uint8_t value,Data;
+..\User\Bsp\DEV_IIC.c: 2 warnings, 0 errors
+compiling NTU.c...
+..\User\Bsp\ad_sensor\NTU.c(35): warning:  #223-D: function "printf" declared implicitly
+  		printf("adc4 val: %d\r\t",adcx);
+..\User\Bsp\ad_sensor\NTU.c: 1 warning, 0 errors
+compiling fire_phoenix_esc.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\fire_phoenix_esc\fire_phoenix_esc.c(58): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(
+PIOA, 
+PIO_Pin_4, 1);
+..\User\Bsp\fire_phoenix_esc\fire_phoenix_esc.c(59): warning:  #188-D: enumerated type mixed with another type
+  		GPIO_WriteBit(
+PIOA, 
+PIO_Pin_5, 1);
+..\User\Bsp\fire_phoenix_esc\fire_phoenix_esc.c(403): warning:  #1-D: last line of file ends without a newline
+   
+..\User\Bsp\fire_phoenix_esc\fire_phoenix_esc.c(276): warning:  #177-D: function "buzzer_delay_ms" was declared but never referenced
+  static void buzzer_delay_ms(uint16_t i)
+..\User\Bsp\fire_phoenix_esc\fire_phoenix_esc.c: 7 warnings, 0 errors
+compiling bsp_adc.c...
+compiling battery.c...
+compiling iwdg.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\iwdg.c: 3 warnings, 0 errors
+compiling JXCT_TDS.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\JXCT_TDS\JXCT_TDS.c: 3 warnings, 0 errors
+compiling PH_sensor.c...
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\PH_sensor\PH_sensor.c: 3 warnings, 0 errors
+compiling dht11.c...
+compiling IIC.c...
+compiling light.c...
+compiling water.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\ad_sensor\water.c(33): warning:  #177-D: variable "temp" was declared but never referenced
+  	double temp;
+..\User\Bsp\ad_sensor\water.c(34): warning:  #177-D: variable "bartty" was declared but never referenced
+  	u8 bartty;
+..\User\Bsp\ad_sensor\water.c: 5 warnings, 0 errors
+compiling HC_SR04.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\ad_sensor\HC_SR04.c(44): warning:  #177-D: variable "GPIO_InitStruct" was declared but never referenced
+  	GPIO_InitTypeDef GPIO_InitStruct;
+..\User\Bsp\ad_sensor\HC_SR04.c(36): warning:  #177-D: function "TRIG_delay_us" was declared but never referenced
+  static void TRIG_delay_us(uint16_t i)
+..\User\Bsp\ad_sensor\HC_SR04.c: 5 warnings, 0 errors
+compiling port.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\portable\port.c: 2 warnings, 0 errors
+compiling croutine.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\croutine.c: 2 warnings, 0 errors
+compiling stream_buffer.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\stream_buffer.c: 2 warnings, 0 errors
+compiling BMP280.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\User\Bsp\./PH_sensor/PH_sensor.h(30): warning:  #1295-D: Deprecated declaration Get_PH_Value - give arg types
+  double Get_PH_Value();
+..\User\Bsp\ad_sensor\BMP280.c: 3 warnings, 0 errors
+compiling list.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\list.c: 2 warnings, 0 errors
+compiling event_groups.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\event_groups.c: 2 warnings, 0 errors
+compiling queue.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\queue.c: 2 warnings, 0 errors
+compiling tasks.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\tasks.c: 2 warnings, 0 errors
+compiling timers.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\timers.c: 2 warnings, 0 errors
+compiling heap_4.c...
+..\FreeRTOS\FreeRTOSConfig.h(92): warning:  #47-D: incompatible redefinition of macro "configCHECK_FOR_STACK_OVERFLOW" (declared at line 70)
+  #define configCHECK_FOR_STACK_OVERFLOW          0
+..\FreeRTOS\FreeRTOSConfig.h(93): warning:  #47-D: incompatible redefinition of macro "configUSE_MALLOC_FAILED_HOOK" (declared at line 74)
+  #define configUSE_MALLOC_FAILED_HOOK            0
+..\FreeRTOS\portable\heap_4.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=63096 RO-data=1452 RW-data=936 ZI-data=36160  
+FromELF: creating hex file...
+".\Objects\HY-F407.axf" - 0 Error(s), 202 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.5.0.pack
+                Keil.STM32F4xx_DFP.2.5.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_YH
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
